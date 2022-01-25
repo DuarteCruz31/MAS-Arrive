@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../Estilos/home.css" />
+    <link rel='icon' href="../Imagens/Logo/arrive amarelo_branco.png">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark d-block" style="margin-bottom: 100px">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img style="width: 200px" src="../Imagens/Logo/arrive amarelo_branco.png" alt="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="home.html"><i class="fa fa-home"></i> HOME</a>
+                    <a class="nav-link" href="destinations.html"><i class="fa fa-plane"></i> DESTINATIONS</a>
+                    <a class="nav-link" href="aboutus.html"><i class="fa fa-user"></i> ABOUT US</a>
+
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- inser more links here -->
+                    <li><a class="cd-signin" href="#0">Sign in</a></li>
+                    <li><a class="cd-signup" href="#0">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <!-- F/Navbar -->
+    <!-- Filter -->
+    <section class="mt-8 py-0" style="margin-top: 100px; margin-bottom: 100px;">
+        <div class="bg-holder d-none d-lg-block" style="background-image: url(../Imagens/Login/background.jpeg);
+            "></div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 py-5 py-xl-5 py-xxl-7" style="position:absolute; left: 38%; top:20%;">
+                    <h1 class="display-3 text-1000 fw-normal" style="color: white;">Let’s make a tour</h1>
+                    <h1 class="display-3 text-secondary fw-bold">
+                        Discover the beauty
+                    </h1>
+                </div>
+            </div>
+    </section>
+    <!-- carousel -->
+    <section id="testimonial">
+        <div class="container" style="margin-top: 800px;">
+            <div class="row h-100">
+                <div class="col-lg-7 mx-auto text-center mb-6">
+                    <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Flash Deals</h5>
+                </div>
+                <div class="col-12">
+                    <div class="carousel slide" id="carouselTestimonials" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="row h-100 align-items-center g-2">
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptodubaiflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Dubai.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Dubai Beach Resort
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Dubai, EAU</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">5 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        1850€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>1575€</span><span class="text-900 fs--1 fw-normal">(2 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptomiamiflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Miami.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Miami South Beach Hotel
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Miami, EUA</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">6 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        4200€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>3500€</span><span class="text-900 fs--1 fw-normal">(5 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptoparisflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Paris.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Eiffel Hôtel Paris
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Paris, França</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">3 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        900€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>750€</span><span class="text-900 fs--1 fw-normal">(4 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <div class="row h-100 align-items-center g-2">
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptoromeflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Roma.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Colosseum Romae Hotel
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Lisboa, Portugal</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">2 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        180€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>150€</span><span class="text-900 fs--1 fw-normal">(1 person)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptotokyoflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Tóquio.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Shinjuku Tokyo Hotel
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Tóquio, Japão</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">3 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        2200€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>1875€</span><span class="text-900 fs--1 fw-normal">(2 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptocapetownflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Cidade do Cabo.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Cape Town Hostel
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Cidade do Cabo, África do Sul</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">5 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        650€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>550€</span><span class="text-900 fs--1 fw-normal">(2 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <div class="row h-100 align-items-center g-2">
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptolisbonflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Lisboa.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Hotel Grande Lisboa
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Lisboa, Portugal</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">2 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        180€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>150€</span><span class="text-900 fs--1 fw-normal">(1 person)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptosidneyflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Sidney.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Sidney Port Jackson Bay Resort
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Dubai, EAU</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">5 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        1850€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>1575€</span><span class="text-900 fs--1 fw-normal">(2 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptonyflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/NY.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        New York Central Hotel
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">New York, USA</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">4 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        3600€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>2800€</span><span class="text-900 fs--1 fw-normal">(8 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row h-100 align-items-center g-2">
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptolondonflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Londres.png" />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Main London Hotel
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Londres</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">3 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        900€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>750€</span><span class="text-900 fs--1 fw-normal">(4 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptomadridflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Madrid.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Madrid Grande Hotel Plaza
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Madrid</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span><span class="text-900">5 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        650€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>550€</span><span class="text-900 fs--1 fw-normal">(2 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mb-md-0 h-100">
+                                        <a href="triptorioflash.html" class="unit-9">
+                                            <div class="card card-span h-100 text-white">
+                                                <img class="img-fluid h-100" src="../Imagens/Cidades/agencia/Rio.png" alt="..." />
+                                                <div class="card-img-overlay ps-0">
+                                                    <span class="badge bg-primary ms-3 me-1 p-2">
+                                                        <i class="fas fa-clock me-1"></i><span>20:04:32:21</span>
+                                                    </span><span class="badge bg-secondary p-2">
+                                                        <i class="fas fa-bolt me-1"></i><span>trending</span><i class="fas fa-bolt ms-1"> </i>
+                                                    </span>
+                                                </div>
+                                                <div class="card-body ps-0">
+                                                    <h5 class="fw-bold text-1000 mb-4 text-truncate">
+                                                        Rio Resort
+                                                    </h5>
+                                                    <div class="d-flex align-items-center justify-content-start">
+                                                        <span class="text-800 fs--1 me-2"><i class="fas fa-map-marker-alt"></i></span><span class="text-900 me-3">Rio de Janeiro, Brasil</span><span class="text-800 fs--1 me-2"><i class="fas fa-calendar"></i></span>
+                                                        <span class="text-900">4 days</span>
+                                                    </div>
+                                                    <p class="text-decoration-line-through text-900 mt-3 mb-0">
+                                                        1800€
+                                                    </p>
+                                                    <h1 class="mb-3 text-primary fw-bolder fs-4">
+                                                        <span>1500€</span><span class="text-900 fs--1 fw-normal">(2 people)</span>
+                                                    </h1>
+                                                    <span class="badge bg-soft-secondary p-2">
+                                                        <i class="fas fa-tag text-secondary fs--1 me-1"></i><span class="text-secondary fw-normal fs-1">-15%</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"
+                                          aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"
+                                          aria-hidden="true"></span><span class="visually-hidden">Next </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row flex-center">
+                            <div class="col-auto position-relative z-index-2">
+                                <ol class="carousel-indicators me-xxl-7 me-xl-4 me-lg-7">
+                                    <li class="active" data-bs-target="#carouselTestimonials" data-bs-slide-to="0"></li>
+                                    <li data-bs-target="#carouselTestimonials" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carouselTestimonials" data-bs-slide-to="2"></li>
+                                    <li data-bs-target="#carouselTestimonials" data-bs-slide-to="3"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="cd-user-modal" style="margin-top: 100px;">
+        <!-- this is the entire modal form, including the background -->
+        <div class="cd-user-modal-container">
+            <!-- this is the container wrapper -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">New account</a></li>
+            </ul>
+
+            <div id="cd-login">
+                <!-- log in form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Password" />
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked />
+                        <label for="remember-me">Remember me</label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Login" />
+                    </p>
+                </form>
+                <p class="cd-form-bottom-message" style="text-align: center">
+                    <a href="#0">Forgot your password?</a>
+                </p>
+                <p class="cd-form-bottom-message" style="margin-top: 100px"></p>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div>
+            <!-- cd-login -->
+
+            <div id="cd-signup">
+                <!-- sign up form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Password" />
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms" />
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account" />
+                    </p>
+                </form>
+
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div>
+            <!-- cd-signup -->
+
+            <div id="cd-reset-password">
+                <!-- reset password form -->
+                <p class="cd-form-message">
+                    Lost your password? Please enter your email address. You will receive a link to create a new password.
+                </p>
+
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password" />
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message" style="text-align: center">
+                    <a href="#0">Back to log-in</a>
+                </p>
+            </div>
+            <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+        </div>
+        <!-- cd-user-modal-container -->
+    </div>
+    <!-- F/Modal -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted mt-5">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            <i class="fas fa-gem me-3"></i>Arrive
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            Contact
+                        </h6>
+                        <p>
+                            <i class="fas fa-home me-3"></i> Universidade de Aveiro, 3810-193 Aveiro
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i> arrive@ua.pt
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 969 999 999</p>
+                        <p><i class="fas fa-print me-3"></i> + 231 457 876</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://www.ua.pt/">Alunos de MAS da Universidade de Aveiro</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- F/Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+    <script src="../Scripts/knockout-3.5.1.js"></script>
+    <script src="../Scripts/home.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</body>
+
+</html>

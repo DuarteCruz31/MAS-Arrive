@@ -1,0 +1,313 @@
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Nunito Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #505260;
+    background-color: #fff;
+}
+
+a {
+    color: #2f889a;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.input-group {
+    width: 33.2%;
+}
+
+.localizacoes {
+    width: 16.6%;
+}
+
+.numeroDePessoas {
+    width: 16.6%;
+}
+
+.fa-calendar {
+    margin: auto;
+    width: 50px;
+    height: 47px;
+    border: #ced4da;
+    border-style: solid;
+    border-width: 1px 1px 1px 0px;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 47px;
+    margin-right: 0.05rem;
+}
+
+.input-daterange {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+#datepickercheckin {
+    border: #ced4da;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+#datepickercheckout {
+    border: #ced4da;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#cena {
+    margin-top: 10px;
+}
+
+.unit-9 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: none;
+    height: 400px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ced4da;
+    border-radius: 0.2rem;
+    padding: 10px 0px 10px 10px;
+}
+
+.unit-9 .image {
+    background-size: cover;
+    background-position: center center;
+    transition: 0.3s all ease-in-out;
+    height: 400px;
+    width: 60%;
+    float: left;
+    transition: 0.3s all ease;
+    transform: scale(1.05);
+}
+
+.unit-9.no-height {
+    height: auto;
+}
+
+.unit-9.no-height .image {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.unit-9 .unit-9-content {
+    /*transition: .3s all ease-in-out;*/
+    /*position: absolute;
+      bottom: 0;*/
+    width: 35%;
+    float: right;
+}
+
+.unit-9 h2 {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.unit-9 h3 {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.unit-9 p {
+    color: #000;
+    line-height: 10px;
+    padding-left: 10px;
+}
+
+.unit-9 .n-pessoas {
+    padding-top: 30px;
+    font-size: 15px;
+}
+
+.unit-9 .n-noites {
+    padding-bottom: 50px;
+    font-size: 15px;
+}
+
+.unit-9 .preco-por-noite {
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.unit-9 i {
+    color: #000;
+    font-size: 40px;
+    line-height: 90px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#datepickercheckin {
+    border: #ced4da;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+#datepickercheckout {
+    border: #ced4da;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+.featured-property-half {
+    position: relative;
+    background: #fff;
+    margin-top: -100px;
+    /*-webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-property-half div {
+    width: 50%;
+}
+
+.featured-property-half .image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.featured-property-half .text {
+    padding: 100px;
+}
+
+.featured-property-half .text ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #000;
+}
+
+.featured-property-half .text ul strong {
+    color: #000;
+    font-weight: bold;
+}
+
+.featured-property-half .text ul li {
+    margin-bottom: 10px;
+}
+
+.div-pagamento {
+    width: 33%;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    border: solid #ced4da;
+    border-width: 1px;
+    border-radius: 0.2rem;
+}
+
+.form-control {
+    height: 47px;
+}
+
+.site-block-subscribe .form-control {
+    font-weight: 300;
+    height: 60px;
+    color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.site-block-subscribe .btn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn {
+    position: relative;
+    top: 0;
+    border-radius: 0px;
+}
+
+.btn.btn-secondary {
+    background-color: #e6e7e9;
+    border-color: #e6e7e9;
+    color: #000;
+}
+
+.btn.btn-sm {
+    font-size: 0.9rem;
+}
+
+.btn.btn-primary {
+    color: #fff;
+}
+
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+    color: #fff;
+}
+
+.btn.btn-outline-primary:hover {
+    color: #fff;
+}
+
+.btn.btn-black {
+    background: #000;
+    color: #fff;
+}
+
+.btn.btn-black:hover {
+    background: #333333;
+}
+
+.btn.btn-white.btn-outline-white {
+    border-color: #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.btn.btn-white.btn-outline-white:hover {
+    background: #fff;
+    color: #000;
+}
+
+.site-block-subscribe .btn {
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrive | Trip to Los Angeles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../Estilos/destinations.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="icon" href="../Imagens/Logo/arrive amarelo_branco.png" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark d-block" style="margin-bottom: 100px">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img style="width: 200px" src="../Imagens/Logo/arrive amarelo_branco.png" alt="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="home.html"><i class="fa fa-home"></i> HOME</a
+            >
+            <a class="nav-link active" href="destinations.html"
+              ><i class="fa fa-plane"></i> DESTINATIONS</a
+            >
+            <a class="nav-link" href="aboutus.html"
+              ><i class="fa fa-user"></i> ABOUT US</a
+            >
+          </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <a class="nav-link" href="profile.html"
+            ><i class="fa fa-user"></i> Welcome Back, José</a
+          >
+        </ul>
+      </div>
+    </nav>
+    <!-- F/Navbar -->
+    <div
+      style="
+        height: 768px;
+        background-position: center;
+        background-image: url(https://www.pro-sky.com/images/pt/news/news_header_webseite_-49-_174_big.jpg);
+        align-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    ></div>
+    <div>
+      <h1
+        style="
+          position: absolute;
+          color: black;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+            sans-serif;
+          font-size: 70px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        Los Angeles
+      </h1>
+    </div>
+    <!-- cena -->
+
+    <div class="container">
+      <div class="featured-property-half d-flex">
+        <div
+          class="image"
+          style="background-image: url(../Imagens/Cidades/LA.png)"
+        ></div>
+        <div class="text" style="color: black">
+          <h5>Agência:</h5>
+          <h3>Viagem!</h3>
+          <br />
+          <h5>Preço:</h5>
+          <h3>3600€</h3>
+          <br />
+          <h5>Nº Pessoas:</h5>
+          <h3>8</h3>
+          <br />
+          <h5>Duração:</h5>
+          <h3>4 noites</h3>
+          <br />
+          <h5>Comodidades:</h5>
+          <h3>Regime de meia-pensão</h3>
+          <h3>Serviço de babysitting</h3>
+          <br />
+          <h5>Ofertas:</h5>
+          <h3>Entrada no parque temático da universal studios</h3>
+          <h3>Passeio num autocarro turístico</h3>
+          <br />
+          <br />
+
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="datepickercheckin"
+            placeholder="Check-in"
+            style="width: 50%; float: left"
+          />
+          <label for="datepickercheckin" style="float: left">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="datepickercheckout"
+            placeholder="Check-out"
+            style="width: 50%; float: left"
+          />
+          <label for="datepickercheckout" id="cena" style="float: left">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </label>
+
+          <br />
+          <br />
+
+          <p>
+            <a
+              href="#"
+              class="btn btn-primary px-4 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#pagamentoModal"
+              style="
+                width: 64.5%;
+                border-radius: 0.2rem;
+                background-color: #590084;
+                border-color: #590084;
+              "
+              id="alugar"
+              >Reservar</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagemento -->
+    <!-- Modal para pagamento -->
+    <div
+      class="modal fade"
+      id="pagamentoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Pagamento</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div style="width: 100%; float: left; padding-right: 10px">
+              <p style="width: 20%; float: left; padding: 10px 0px 0px 10px">
+                Email
+              </p>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Email"
+                style="width: 80%; float: left"
+              />
+            </div>
+
+            <div
+              style="
+                width: 100%;
+                height: 150px;
+                padding: 20px 10px 20px 10px;
+                float: left;
+                text-align: center;
+              "
+            >
+              <!-- botao do cartão -->
+              <div
+                id="cartao-btn"
+                class="div-pagamento"
+                style="background-color: #ced4da"
+              >
+                <h5 style="padding-top: 20px; line-height: 15px">Cartão de</h5>
+                <h5 style="line-height: 15px; padding-bottom: 10px">
+                  Crédito/Débito
+                </h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input metodo-pagamento"
+                    type="radio"
+                    id="cartao"
+                    checked
+                  />
+                  <label class="form-check-label" for="cartao"></label>
+                  <img
+                    src="../Imagens/Parcerias/visa.jpg"
+                    alt="Cartão Visa"
+                    width="15%"
+                    height="15%"
+                    style="padding-bottom: 5px"
+                  />
+                  <img
+                    src="../Imagens/Parcerias/mastercard.jpg"
+                    alt="Cartão Visa"
+                    width="15%"
+                    height="15%"
+                    style="padding-bottom: 5px; margin-right: 30px"
+                  />
+                </div>
+              </div>
+              <!-- Fim de botao de cartao -->
+
+              <!-- botao do paypal -->
+              <div id="paypal-btn" class="div-pagamento">
+                <h5
+                  style="
+                    padding-top: 35px;
+                    line-height: 15px;
+                    padding-bottom: 18px;
+                  "
+                >
+                  Paypal
+                </h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input metodo-pagamento"
+                    type="radio"
+                    id="paypal"
+                  />
+                  <label class="form-check-label" for="paypal"></label>
+                  <img
+                    src="../Imagens/Parcerias/paypal1.png"
+                    alt="Cartão Visa"
+                    width="20%"
+                    height="20%"
+                    style="padding-bottom: 5px; margin-right: 30px"
+                  />
+                </div>
+              </div>
+              <!-- Fim do botao do paypal -->
+              <!-- botao do MBWay -->
+              <div id="mbway-btn" class="div-pagamento">
+                <h5
+                  style="
+                    padding-top: 35px;
+                    line-height: 15px;
+                    padding-bottom: 18px;
+                  "
+                >
+                  MBWAY
+                </h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input metodo-pagamento"
+                    type="radio"
+                    id="mbway"
+                  />
+                  <label class="form-check-label" for="mbway"></label>
+                  <img
+                    src="../Imagens/Parcerias/mbway.png"
+                    alt="mbway"
+                    width="20%"
+                    height="20%"
+                    style="padding-bottom: 5px; margin-right: 25px"
+                  />
+                </div>
+              </div>
+              <!-- Fim do botao do MBWay -->
+            </div>
+
+            <!-- Pagamento com cartao -->
+            <div
+              class="pagamento-cartao"
+              style="width: 50%; float: left; padding: 0px 10px 0px 10px"
+            >
+              <div class="form-group">
+                <label for="exampleInputEmail1">Primeiro nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="Primeiro nome"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Número do cartão</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Número do cartão"
+                />
+              </div>
+              <div class="form-group">
+                <p style="line-height: 13px; padding-top: 7px">País</p>
+                <select
+                  class="form-control form-control-sm"
+                  style="width: 100%"
+                >
+                  <option>País</option>
+                  <option value="África do Sul">África do Sul</option>
+                  <option value="Albânia">Albânia</option>
+                  <option value="Alemanha">Alemanha</option>
+                  <option value="Andorra">Andorra</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Anguilla">Anguilla</option>
+                  <option value="Antigua">Antigua</option>
+                  <option value="Arábia Saudita">Arábia Saudita</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Armênia">Armênia</option>
+                  <option value="Aruba">Aruba</option>
+                  <option value="Austrália">Austrália</option>
+                  <option value="Áustria">Áustria</option>
+                  <option value="Azerbaijão">Azerbaijão</option>
+                  <option value="Bahamas">Bahamas</option>
+                  <option value="Bahrein">Bahrein</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Barbados">Barbados</option>
+                  <option value="Bélgica">Bélgica</option>
+                  <option value="Benin">Benin</option>
+                  <option value="Bermudas">Bermudas</option>
+                  <option value="Botsuana">Botsuana</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Brunei">Brunei</option>
+                  <option value="Bulgária">Bulgária</option>
+                  <option value="Burkina Fasso">Burkina Fasso</option>
+                  <option value="botão">botão</option>
+                  <option value="Cabo Verde">Cabo Verde</option>
+                  <option value="Camarões">Camarões</option>
+                  <option value="Camboja">Camboja</option>
+                  <option value="Canadá">Canadá</option>
+                  <option value="Cazaquistão">Cazaquistão</option>
+                  <option value="Chade">Chade</option>
+                  <option value="Chile">Chile</option>
+                  <option value="China">China</option>
+                  <option value="Cidade do Vaticano">Cidade do Vaticano</option>
+                  <option value="Colômbia">Colômbia</option>
+                  <option value="Congo">Congo</option>
+                  <option value="Coréia do Sul">Coréia do Sul</option>
+                  <option value="Costa do Marfim">Costa do Marfim</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Croácia">Croácia</option>
+                  <option value="Dinamarca">Dinamarca</option>
+                  <option value="Djibuti">Djibuti</option>
+                  <option value="Dominica">Dominica</option>
+                  <option value="EUA">EUA</option>
+                  <option value="Egito">Egito</option>
+                  <option value="El Salvador">El Salvador</option>
+                  <option value="Emirados Árabes">Emirados Árabes</option>
+                  <option value="Equador">Equador</option>
+                  <option value="Eritréia">Eritréia</option>
+                  <option value="Escócia">Escócia</option>
+                  <option value="Eslováquia">Eslováquia</option>
+                  <option value="Eslovênia">Eslovênia</option>
+                  <option value="Espanha">Espanha</option>
+                  <option value="Estônia">Estônia</option>
+                  <option value="Etiópia">Etiópia</option>
+                  <option value="Fiji">Fiji</option>
+                  <option value="Filipinas">Filipinas</option>
+                  <option value="Finlândia">Finlândia</option>
+                  <option value="França">França</option>
+                  <option value="Gabão">Gabão</option>
+                  <option value="Gâmbia">Gâmbia</option>
+                  <option value="Gana">Gana</option>
+                  <option value="Geórgia">Geórgia</option>
+                  <option value="Gibraltar">Gibraltar</option>
+                  <option value="Granada">Granada</option>
+                  <option value="Grécia">Grécia</option>
+                  <option value="Guadalupe">Guadalupe</option>
+                  <option value="Guam">Guam</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="Guiana">Guiana</option>
+                  <option value="Guiana Francesa">Guiana Francesa</option>
+                  <option value="Guiné-bissau">Guiné-bissau</option>
+                  <option value="Haiti">Haiti</option>
+                  <option value="Holanda">Holanda</option>
+                  <option value="Honduras">Honduras</option>
+                  <option value="Hong Kong">Hong Kong</option>
+                  <option value="Hungria">Hungria</option>
+                  <option value="Iêmen">Iêmen</option>
+                  <option value="Ilhas Cayman">Ilhas Cayman</option>
+                  <option value="Ilhas Cook">Ilhas Cook</option>
+                  <option value="Ilhas Curaçao">Ilhas Curaçao</option>
+                  <option value="Ilhas Marshall">Ilhas Marshall</option>
+                  <option value="Ilhas Turks & Caicos">
+                    Ilhas Turks & Caicos
+                  </option>
+                  <option value="Ilhas Virgens (brit.)">
+                    Ilhas Virgens (brit.)
+                  </option>
+                  <option value="Ilhas Virgens(amer.)">
+                    Ilhas Virgens(amer.)
+                  </option>
+                  <option value="Ilhas Wallis e Futuna">
+                    Ilhas Wallis e Futuna
+                  </option>
+                  <option value="Índia">Índia</option>
+                  <option value="Indonésia">Indonésia</option>
+                  <option value="Inglaterra">Inglaterra</option>
+                  <option value="Irlanda">Irlanda</option>
+                  <option value="Islândia">Islândia</option>
+                  <option value="Israel">Israel</option>
+                  <option value="Itália">Itália</option>
+                  <option value="Jamaica">Jamaica</option>
+                  <option value="Japão">Japão</option>
+                  <option value="Jordânia">Jordânia</option>
+                  <option value="Kuwait">Kuwait</option>
+                  <option value="Latvia">Latvia</option>
+                  <option value="Líbano">Líbano</option>
+                  <option value="Liechtenstein">Liechtenstein</option>
+                  <option value="Lituânia">Lituânia</option>
+                  <option value="Luxemburgo">Luxemburgo</option>
+                  <option value="Macau">Macau</option>
+                  <option value="Macedônia">Macedônia</option>
+                  <option value="Madagascar">Madagascar</option>
+                  <option value="Malásia">Malásia</option>
+                  <option value="Malaui">Malaui</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Marrocos">Marrocos</option>
+                  <option value="Martinica">Martinica</option>
+                  <option value="Mauritânia">Mauritânia</option>
+                  <option value="Mauritius">Mauritius</option>
+                  <option value="México">México</option>
+                  <option value="Moldova">Moldova</option>
+                  <option value="Mônaco">Mônaco</option>
+                  <option value="Montserrat">Montserrat</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Nicarágua">Nicarágua</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Nigéria">Nigéria</option>
+                  <option value="Noruega">Noruega</option>
+                  <option value="Nova Caledônia">Nova Caledônia</option>
+                  <option value="Nova Zelândia">Nova Zelândia</option>
+                  <option value="Omã">Omã</option>
+                  <option value="Palau">Palau</option>
+                  <option value="Panamá">Panamá</option>
+                  <option value="Papua-nova Guiné">Papua-nova Guiné</option>
+                  <option value="Paquistão">Paquistão</option>
+                  <option value="Peru">Peru</option>
+                  <option value="Polinésia Francesa">Polinésia Francesa</option>
+                  <option value="Polônia">Polônia</option>
+                  <option value="Porto Rico">Porto Rico</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Qatar">Qatar</option>
+                  <option value="Quênia">Quênia</option>
+                  <option value="Rep. Dominicana">Rep. Dominicana</option>
+                  <option value="Rep. Tcheca">Rep. Tcheca</option>
+                  <option value="Reunion">Reunion</option>
+                  <option value="Romênia">Romênia</option>
+                  <option value="Ruanda">Ruanda</option>
+                  <option value="Rússia">Rússia</option>
+                  <option value="Saipan">Saipan</option>
+                  <option value="Samoa Americana">Samoa Americana</option>
+                  <option value="Senegal">Senegal</option>
+                  <option value="Serra Leone">Serra Leone</option>
+                  <option value="Seychelles">Seychelles</option>
+                  <option value="Singapura">Singapura</option>
+                  <option value="Síria">Síria</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
+                  <option value="St. Lúcia">St. Lúcia</option>
+                  <option value="St. Vincent">St. Vincent</option>
+                  <option value="Sudão">Sudão</option>
+                  <option value="Suécia">Suécia</option>
+                  <option value="Suiça">Suiça</option>
+                  <option value="Suriname">Suriname</option>
+                  <option value="Tailândia">Tailândia</option>
+                  <option value="Taiwan">Taiwan</option>
+                  <option value="Tanzânia">Tanzânia</option>
+                  <option value="Togo">Togo</option>
+                  <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                  <option value="Tunísia">Tunísia</option>
+                  <option value="Turquia">Turquia</option>
+                  <option value="Ucrânia">Ucrânia</option>
+                  <option value="Uganda">Uganda</option>
+                  <option value="Uruguai">Uruguai</option>
+                  <option value="Venezuela">Venezuela</option>
+                  <option value="Vietnã">Vietnã</option>
+                  <option value="Zaire">Zaire</option>
+                  <option value="Zâmbia">Zâmbia</option>
+                  <option value="Zimbábue">Zimbábue</option>
+                </select>
+              </div>
+            </div>
+
+            <div
+              class="pagamento-cartao"
+              style="width: 50%; float: left; padding: 0px 10px 0px 10px"
+            >
+              <div class="form-group">
+                <label for="exampleInputEmail1">Último nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="Último nome"
+                />
+              </div>
+              <div class="form-group" style="width: 40%; float: left">
+                <label for="exampleInputPassword1">Data de validade</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="MM/YY"
+                />
+              </div>
+              <div
+                class="form-group"
+                style="width: 40%; float: left; padding-left: 50px"
+              >
+                <label for="exampleInputPassword1">CVV</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="CVV"
+                />
+              </div>
+              <div class="form-group" style="width: 100%; float: left">
+                <label for="exampleInputPassword1">Código postal</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Código postal"
+                  style="width: 50%"
+                />
+              </div>
+            </div>
+            <!-- Fim de pagamento com cartao -->
+
+            <!-- Pagamento por paypal -->
+            <div
+              class="pagamento-paypal"
+              style="width: 100%; float: left; padding: 0px 10px 0px 10px"
+            >
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email da conta PayPal</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group" style="width: 100%; float: left">
+                <label for="exampleInputPassword1">Palavra-Passe</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Palavra-Passe"
+                />
+              </div>
+            </div>
+            <!-- Fim de pagamento com paypal -->
+            <!-- Pagamento por MBWay -->
+            <div
+              class="pagamento-mbway"
+              style="width: 100%; float: left; padding: 0px 10px 0px 10px"
+            >
+              <div class="form-group">
+                <label for="exampleInputEmail1">Número de telemóvel</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="9********"
+                />
+              </div>
+              <h6 style="text-align: center">
+                Será posteriormente enviada uma mensagem de confirmação para o
+                seu dispositivo onde, posteriormente, a terá de aceitar na APP
+              </h6>
+            </div>
+            <!-- Fim de pagamento por MBWay -->
+          </div>
+
+          <hr
+            style="
+              height: 2px;
+              width: 100%;
+              border-width: 0;
+              color: gray;
+              background-color: gray;
+            "
+          />
+
+          <div style="width: 100%; float: left; padding: 20px 35px 0px 35px">
+            <p style="width: 50%; float: left; font-size: larger">Total</p>
+            <p style="width: 50%; float: right; font-size: larger">
+              <span style="float: right" id="preco-total">3600€</span>
+            </p>
+          </div>
+
+          <div
+            class="modal-footer"
+            style="padding: 15px 15px 15px 15px; justify-content: center"
+          >
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#myModal"
+              type="submit"
+              class="btn btn-primary"
+              style="height: 60px; width: 300px"
+            >
+              Confirmar
+            </button>
+          </div>
+
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Pagamento efetuado</h4>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    style="margin-left: 48%"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- F/Pagamento -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted mt-5">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+                </section>
+                <!-- Section: Social media -->
+                <!-- Section: Links  -->
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <!-- Content -->
+                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                                    <i class="fas fa-gem me-3"></i>Arrive
+                                </h6>
+                                <p>
+                                    Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                                    Products
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset">Angular</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">React</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Vue</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Laravel</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                                    Useful links
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset">Pricing</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Settings</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Orders</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Help</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                                    Contact
+                                </h6>
+                                <p>
+                                    <i class="fas fa-home me-3"></i> Universidade de Aveiro, 3810-193 Aveiro
+                                </p>
+                                <p><i class="fas fa-envelope me-3"></i> arrive@ua.pt</p>
+                                <p><i class="fas fa-phone me-3"></i> + 969 999 999</p>
+                                <p><i class="fas fa-print me-3"></i> + 231 457 876</p>
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+                <!-- Copyright -->
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+                    © 2021 Copyright:
+                    <a class="text-reset fw-bold" href="https://www.ua.pt/">Alunos de MAS da Universidade de Aveiro</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- F/Footer -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+    <script src="../Scripts/knockout-3.5.1.js"></script>
+    <script src="../Scripts/pagedesti.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  </body>
+</html>

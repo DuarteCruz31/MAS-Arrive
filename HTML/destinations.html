@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="../Estilos/trips.css" />
+    <link rel='icon' href="../Imagens/Logo/arrive amarelo_branco.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark d-block" style="margin-bottom: 100px">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img style="width: 200px" src="../Imagens/Logo/arrive amarelo_branco.png" alt="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="home.html"><i class="fa fa-home"></i> HOME</a>
+                    <a class="nav-link active" href="destinations.html"><i class="fa fa-plane"></i> DESTINATIONS</a>
+                    <a class="nav-link" href="aboutus.html"><i class="fa fa-user"></i> ABOUT US</a>
+
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <!-- inser more links here -->
+                    <li><a class="cd-signin" href="#0">Sign in</a></li>
+                    <li><a class="cd-signup" href="#0">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <!-- F/Navbar -->
+    <div style="height: 768px; background-position: center; background-image: url(../Imagens/Login/plane.png); align-content: center;">
+    </div>
+    <div>
+        <h1 style="position: absolute;color:black;   position: absolute; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:42px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);">Search for your favourite destinations</h1>
+    </div>
+    <div class="container">
+        <!-- Filtros -->
+        <div class="row mb-5 mt-4">
+            <div class="input-group input-daterange">
+                <input type="text" class="form-control form-control-sm" id="datepickercheckin" placeholder="Check-in">
+                <label for="datepickercheckin">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </label>
+                <input type="text" class="form-control form-control-sm" id="datepickercheckout" placeholder="Check-out">
+                <label for="datepickercheckout">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </label>
+            </div>
+
+            <select class="form-control form-control-sm localizacoes">
+              <option value="destination">Location</option>
+              <option value="Europe">Europe</option>
+              <option value="Asia">Asia</option>
+              <option value="America">America</option>
+              <option value="Africa">Africa</option>
+            </select>
+
+            <select class="form-control form-control-sm numeroDePessoas">
+              <option value="destination">Number of people</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+
+            <select class="form-control form-control-sm preco-minimo" style="width: 16.6%;">
+              <option value="0">Minimum price</option>
+              <option value="100">100€</option>
+              <option value="200">200€</option>
+              <option value="300">300€</option>
+              <option value="400">400€</option>
+              <option value="500">500€</option>
+              <option value="600">600€</option>
+              <option value="700">700€</option>
+              <option value="800">800€</option>
+            </select>
+
+            <select class="form-control form-control-sm preco-maximo" style="width: 16.6%;">
+              <option value="1000000">Maximum Price</option>
+              <option value="200">200€</option>
+              <option value="500">500€</option>
+              <option value="1000">1000€</option>
+              <option value="1500">1500€</option>
+              <option value="2000">2000€</option>
+              <option value="3000">3000€</option>
+              <option value="4000">4000€</option>
+              <option value="4200">4200€</option>
+            </select>
+        </div>
+        <!-- Fim de filtros -->
+
+
+        <!-- Alojamentos -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptodubai.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Dubai.png'); height:400px"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination asia 2" id="21/6/2020">Trip to Dubai</h2>
+
+                        <h3 id="1850" class="nome-destination destination asia 2">Asia</h3>
+                        <i class="fas fa-hotel"></i>
+                        <i class="fas fa-bath"></i>
+                        <h2 class="n-pessoas">2 Pessoas</h2>
+                        <h3 class='n-noites'>5 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">1850€</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptola.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/LA.png'); background-size: 800px 400px; background-repeat: no-repeat;"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination america 8" id="25/7/2020">Trip to Los Angeles</h2>
+
+                        <h3 id="3600" class="nome-destination destination america 8">America</h3>
+                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                        <i class="fa fa-bath" aria-hidden="true"></i>
+                        <h2 class="n-pessoas">8 Pessoas</h2>
+                        <h3 class='n-noites'>4 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">3600€</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptolisbon.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Lisboa.png');"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination europe 1" id="10/6/2020">Trip to Lisbon</h2>
+
+                        <h3 id="180" class="nome-destination destination europe 1">Europe</h3>
+                        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <i class="fa fa-bath" aria-hidden="true"></i>
+                        <h2 class="n-pessoas">1 Pessoas</h2>
+                        <h3 class='n-noites'>2 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">180€</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptolondon.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Londres.png');"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination europe 4" id="2/6/2020">Trip to London</h2>
+
+                        <h3 id="900" class="nome-destination destination europe 4">Europe</h3>
+                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                        <h2 class="n-pessoas">4 Pessoas</h2>
+                        <h3 class='n-noites'>3 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">900€</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptomadrid.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Madrid.png');"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination europe 2" id="29/8/2021">Trip to Madrid</h2>
+
+                        <h3 id="650" class="nome-destination destination europe 2">Europe</h3>
+                        <i class="far fa-snowflake"></i>
+                        <h2 class="n-pessoas">2 Pessoas</h2>
+                        <h3 class='n-noites'>5 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">650€</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptomiami.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Miami.png');"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination america 3" id="13/6/2021">Trip to Miami</h2>
+
+                        <h3 id="4200" class="nome-destination destination america 3">America</h3>
+                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                        <h2 class="n-pessoas">5 Pessoas</h2>
+                        <h3 class='n-noites'>6 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">4200€</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptotokyo.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Tóquio.png'); height: 400px;"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination asia 2" id="12/7/2021">Trip to Tokyo</h2>
+
+                        <h3 id="2200" class="nome-destination destination asia 2">Asia</h3>
+                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <i class="fa fa-bath" aria-hidden="true"></i>
+                        <h2 class="n-pessoas">2 Pessoas</h2>
+                        <h3 class='n-noites'>3 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">€2200</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-12 col-lg-12 mb-5">
+                <a href="triptorio.html" class="unit-9">
+                    <div class="image" style="background-image: url('../Imagens/Cidades/agencia/Rio.png');"></div>
+                    <div class="unit-9-content">
+                        <h2 class="destination america 4" id="30/7/2020">Trip to Rio de Janeiro</h2>
+
+                        <h3 id="1800" class="nome-destination destination america 4">America</h3>
+                        <i class="fa fa-wifi" aria-hidden="true"></i></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <h2 class="n-pessoas">2 Pessoas</h2>
+                        <h3 class='n-noites'>4 noites</h3>
+                        <p>A partir de:</p>
+                        <p class="preco-por-noite">1800€</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-12 col-lg-12 mb-5" id="no-results">
+                <div class="unit-9-content" style="text-align: center; padding-top: 50px;">
+                    <h2>Não foram encontrados resultados para a sua pesquisa</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Fim de alojamentos -->
+
+        
+        <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+                <p class="pt-2">
+                    <strong>If you are a company and want to add your own trips to our site click here </strong>
+                </p>
+            </div>
+            <!--Grid column-->
+            <div class="col-auto">
+                <!-- Submit button -->
+                <button type="button" onclick='resetModal()' class="btn btn-outline-warning mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                    Add Trip
+                </button>
+            </div>
+            <!--Grid column-->
+        </div>
+
+    </div>
+    </div>
+
+    <!--Modal add trip-->
+
+    <div class="modal fade background1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" id='modal1'>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Preencha o formulário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="InputName" class="form-label">Nome da Agência</label>
+                        <input type="text" class="form-control" id="InputName" placeholder="Nome">
+                        <div class='text-danger d-none' id='nomeError'><small><i class="fa fa-exclamation-triangle"></i> Nome tem de ter mais de 10 letras</small></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputDestino" class="form-label">Destino</label>
+                        <input type="text" class="form-control" id="InputDestino" placeholder="Destino">
+                        <div class='text-danger d-none' id='destinoError'><small>Insira um destino válido</small></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputpreco" class="form-label">Preço</label>
+                        <input type="text" id="inputpreco" class="form-control" placeholder="Ex. 100€">
+                        <div class='text-danger d-none' id='precoError'><small><i class="fa fa-exclamation-triangle"></i> Insira um preço no formato "123€"</small></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputpessoas" class="form-label">Nº de Pessoas</label>
+                        <input type="text" id="inputpessoas" class="form-control" placeholder="Ex. 2">
+                        <div class='text-danger d-none' id='pessoasError'><small><i class="fa fa-exclamation-triangle"></i> Insira um número de pessoas válido</small></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputduracao" class="form-label">Duração da viagem</label>
+                        <input type="text" id="inputduracao" class="form-control" placeholder="Ex. 5 noites">
+                        <div class='text-danger d-none' id='duraçãoError'><small><i class="fa fa-exclamation-triangle"></i> Insira uma duração válido</small></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputcomodidades" class="form-label">Comodidades</label>
+                        <input type="text" id="inputcomodidades" class="form-control" placeholder="Ex. Hotel, Spa">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputofertas" class="form-label">Ofertas</label>
+                        <input type="text" id="inputofertas" class="form-control" placeholder='Ofertas'>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputcomentario" class="form-label">Alguma coisa a acrescentar?</label>
+                        <textarea id='inputcomentario' placeholder="Comentários" rows="4" cols='54'></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick='validate()' >Enviar</button>
+                </div>
+            </div>
+            <div class="modal-content d-none" id='modal2'>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Obrigado pela sua contribuição!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> Iremos analisar a sua inscrição e em breve entraremos em contacto.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--fim modal add trip-->
+
+    </div>
+    </div>
+    <div class="cd-user-modal" style="margin-top: 100px;">
+        <!-- this is the entire modal form, including the background -->
+        <div class="cd-user-modal-container">
+            <!-- this is the container wrapper -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">New account</a></li>
+            </ul>
+
+            <div id="cd-login">
+                <!-- log in form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Password" />
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked />
+                        <label for="remember-me">Remember me</label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Login" />
+                    </p>
+                </form>
+                <p class="cd-form-bottom-message" style="text-align: center">
+                    <a href="#0">Forgot your password?</a>
+                </p>
+                <p class="cd-form-bottom-message" style="margin-top: 100px"></p>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div>
+            <!-- cd-login -->
+
+            <div id="cd-signup">
+                <!-- sign up form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Password" />
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms" />
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account" />
+                    </p>
+                </form>
+
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div>
+            <!-- cd-signup -->
+
+            <div id="cd-reset-password">
+                <!-- reset password form -->
+                <p class="cd-form-message">
+                    Lost your password? Please enter your email address. You will receive a link to create a new password.
+                </p>
+
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail" />
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password" />
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message" style="text-align: center">
+                    <a href="#0">Back to log-in</a>
+                </p>
+            </div>
+            <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+        </div>
+        <!-- cd-user-modal-container -->
+    </div>
+    <!-- F/Modal -->
+
+    <!-- Pagamento -->
+
+
+
+    <!-- F/Pagamento -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted mt-5">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            <i class="fas fa-gem me-3"></i>Arrive
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
+                            Contact
+                        </h6>
+                        <p>
+                            <i class="fas fa-home me-3"></i> Universidade de Aveiro, 3810-193 Aveiro
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i> arrive@ua.pt
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 969 999 999</p>
+                        <p><i class="fas fa-print me-3"></i> + 231 457 876</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://www.ua.pt/">Alunos de MAS da Universidade de Aveiro</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- F/Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="../Scripts/knockout-3.5.1.js"></script>
+    <script src="../Scripts/home.js"></script>
+</body>
+
+</html>
