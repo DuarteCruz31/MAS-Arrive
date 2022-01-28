@@ -59,14 +59,19 @@
             <a class="nav-link active" href="destinations.html"
               ><i class="fa fa-plane"></i> DESTINATIONS</a
             >
-            <a class="nav-link" href="aboutus.html"><i class="fa fa-user"></i> ABOUT US</a>
+            <a class="nav-link" href="aboutus.html"
+              ><i class="fa fa-user"></i> ABOUT US</a
+            >
           </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <a class="nav-link" href="profile.html"
-            ><i class="fa fa-user"></i> Welcome Back, José</a
-          >
-        </ul>
+        <nav class="main-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <a class="nav-link" href="profile.html"
+              ><i class="fa fa-user"></i> Welcome Back,&nbsp;
+              <span data-bind="text:nome"></span>
+            </a>
+          </ul>
+        </nav>
       </div>
     </nav>
     <!-- F/Navbar -->
@@ -109,7 +114,10 @@
           <h3>BestTravel</h3>
           <br />
           <h5>Preço:</h5>
-		  <h3><span style="color:sandybrown"><s>650€</s></span> 550€</h3>          <br />
+          <h3>
+            <span style="color: sandybrown"><s>650€</s></span> 550€
+          </h3>
+          <br />
           <br />
           <h5>Nº Pessoas:</h5>
           <h3>2</h3>
@@ -158,7 +166,12 @@
               class="btn btn-primary px-4 py-3"
               data-bs-toggle="modal"
               data-bs-target="#pagamentoModal"
-              style="width: 64.5%; border-radius: 0.2rem; background-color:sandybrown; border-color:sandybrown"
+              style="
+                width: 64.5%;
+                border-radius: 0.2rem;
+                background-color: sandybrown;
+                border-color: sandybrown;
+              "
               id="alugar"
               >Reservar</a
             >
@@ -314,26 +327,39 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="nome"
                   placeholder="Primeiro nome"
                 />
+                <div class="text-danger d-none" id="nomeError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Nome tem de ter
+                    mais de 2 letras</small
+                  >
+                </div>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Número do cartão</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="cartao"
                   placeholder="Número do cartão"
                 />
+                <div class="text-danger d-none" id="cartaoError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Número tem de
+                    ter entre 13 e 16 algarismos</small
+                  >
+                </div>
               </div>
               <div class="form-group">
                 <p style="line-height: 13px; padding-top: 7px">País</p>
                 <select
-                  class="form-control form-control-sm"
+                  id="pais"
+                  class="form-control form-control-sm required"
                   style="width: 100%"
                 >
-                  <option>País</option>
+                  <option value="">País</option>
                   <option value="África do Sul">África do Sul</option>
                   <option value="Albânia">Albânia</option>
                   <option value="Alemanha">Alemanha</option>
@@ -518,6 +544,12 @@
                   <option value="Zimbábue">Zimbábue</option>
                 </select>
               </div>
+              <div class="text-danger d-none" id="paisError">
+                <small
+                  ><i class="fa fa-exclamation-triangle"></i> Tem de selecionar
+                  um país</small
+                >
+              </div>
             </div>
 
             <div
@@ -529,18 +561,30 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="sobrenome"
                   placeholder="Último nome"
                 />
+                <div class="text-danger d-none" id="sobrenomeError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Sobrenome tem de
+                    ter mais de 2 letras</small
+                  >
+                </div>
               </div>
               <div class="form-group" style="width: 40%; float: left">
                 <label for="exampleInputPassword1">Data de validade</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="datavalidade"
                   placeholder="MM/YY"
                 />
+                <div class="text-danger d-none" id="datavalidadeError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Introduza uma
+                    data correta</small
+                  >
+                </div>
               </div>
               <div
                 class="form-group"
@@ -550,19 +594,31 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="cvv"
                   placeholder="CVV"
                 />
+              </div>
+              <div class="text-danger d-none" id="cvvError">
+                <small
+                  ><i class="fa fa-exclamation-triangle"></i> Introduza um CVV
+                  correto</small
+                >
               </div>
               <div class="form-group" style="width: 100%; float: left">
                 <label for="exampleInputPassword1">Código postal</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="postal"
                   placeholder="Código postal"
                   style="width: 50%"
                 />
+                <div class="text-danger d-none" id="postalError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Introduza um
+                    código postal correto</small
+                  >
+                </div>
               </div>
             </div>
             <!-- Fim de pagamento com cartao -->
@@ -602,9 +658,15 @@
                 <input
                   type="number"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="tele"
                   placeholder="9********"
                 />
+                <div class="text-danger d-none" id="teleError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Introduza um
+                    número de telemóvel correto</small
+                  >
+                </div>
               </div>
               <h6 style="text-align: center">
                 Será posteriormente enviada uma mensagem de confirmação para o
@@ -613,7 +675,6 @@
             </div>
             <!-- Fim de pagamento por MBWay -->
           </div>
-
           <hr
             style="
               height: 2px;
@@ -636,11 +697,15 @@
             style="padding: 15px 15px 15px 15px; justify-content: center"
           >
             <button
-              data-bs-toggle="modal"
-              data-bs-target="#myModal"
+              onclick="validate()"
               type="submit"
               class="btn btn-primary"
-              style="height: 60px; width: 300px"
+              style="
+                height: 60px;
+                width: 300px;
+                background-color: sandybrown;
+                border-color: sandybrown;
+              "
             >
               Confirmar
             </button>

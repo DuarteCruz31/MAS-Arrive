@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrive | Trip to Rio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../Estilos/destinations.css" />
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="/resources/demos/style.css" />
     <link rel="icon" href="../Imagens/Logo/arrive amarelo_branco.png" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark d-block" style="margin-bottom: 100px">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
-                <img style="width: 200px" src="../Imagens/Logo/arrive amarelo_branco.png" alt="logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark d-block"
+      style="margin-bottom: 100px"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img
+            style="width: 200px"
+            src="../Imagens/Logo/arrive amarelo_branco.png"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="home.html"><i class="fa fa-home"></i> HOME</a
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="home.html"
+              ><i class="fa fa-home"></i> HOME</a
             >
             <a class="nav-link active" href="destinations.html"
               ><i class="fa fa-plane"></i> DESTINATIONS</a
@@ -36,11 +64,14 @@
             >
           </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <a class="nav-link" href="profile.html"
-            ><i class="fa fa-user"></i> Welcome Back, José</a
-          >
-        </ul>
+        <nav class="main-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <a class="nav-link" href="profile.html"
+              ><i class="fa fa-user"></i> Welcome Back,&nbsp;
+              <span data-bind="text:nome"></span>
+            </a>
+          </ul>
+        </nav>
       </div>
     </nav>
     <!-- F/Navbar -->
@@ -292,26 +323,39 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="nome"
                   placeholder="Primeiro nome"
                 />
+                <div class="text-danger d-none" id="nomeError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Nome tem de ter
+                    mais de 2 letras</small
+                  >
+                </div>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Número do cartão</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="cartao"
                   placeholder="Número do cartão"
                 />
+                <div class="text-danger d-none" id="cartaoError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Número tem de
+                    ter entre 13 e 16 algarismos</small
+                  >
+                </div>
               </div>
               <div class="form-group">
                 <p style="line-height: 13px; padding-top: 7px">País</p>
                 <select
-                  class="form-control form-control-sm"
+                  id="pais"
+                  class="form-control form-control-sm required"
                   style="width: 100%"
                 >
-                  <option>País</option>
+                  <option value="">País</option>
                   <option value="África do Sul">África do Sul</option>
                   <option value="Albânia">Albânia</option>
                   <option value="Alemanha">Alemanha</option>
@@ -496,6 +540,12 @@
                   <option value="Zimbábue">Zimbábue</option>
                 </select>
               </div>
+              <div class="text-danger d-none" id="paisError">
+                <small
+                  ><i class="fa fa-exclamation-triangle"></i> Tem de selecionar
+                  um país</small
+                >
+              </div>
             </div>
 
             <div
@@ -507,18 +557,30 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="sobrenome"
                   placeholder="Último nome"
                 />
+                <div class="text-danger d-none" id="sobrenomeError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Sobrenome tem de
+                    ter mais de 2 letras</small
+                  >
+                </div>
               </div>
               <div class="form-group" style="width: 40%; float: left">
                 <label for="exampleInputPassword1">Data de validade</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="datavalidade"
                   placeholder="MM/YY"
                 />
+                <div class="text-danger d-none" id="datavalidadeError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Introduza uma
+                    data correta</small
+                  >
+                </div>
               </div>
               <div
                 class="form-group"
@@ -528,19 +590,31 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="cvv"
                   placeholder="CVV"
                 />
+              </div>
+              <div class="text-danger d-none" id="cvvError">
+                <small
+                  ><i class="fa fa-exclamation-triangle"></i> Introduza um CVV
+                  correto</small
+                >
               </div>
               <div class="form-group" style="width: 100%; float: left">
                 <label for="exampleInputPassword1">Código postal</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="postal"
                   placeholder="Código postal"
                   style="width: 50%"
                 />
+                <div class="text-danger d-none" id="postalError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Introduza um
+                    código postal correto</small
+                  >
+                </div>
               </div>
             </div>
             <!-- Fim de pagamento com cartao -->
@@ -580,9 +654,15 @@
                 <input
                   type="number"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="tele"
                   placeholder="9********"
                 />
+                <div class="text-danger d-none" id="teleError">
+                  <small
+                    ><i class="fa fa-exclamation-triangle"></i> Introduza um
+                    número de telemóvel correto</small
+                  >
+                </div>
               </div>
               <h6 style="text-align: center">
                 Será posteriormente enviada uma mensagem de confirmação para o
@@ -614,11 +694,15 @@
             style="padding: 15px 15px 15px 15px; justify-content: center"
           >
             <button
-              data-bs-toggle="modal"
-              data-bs-target="#myModal"
+              onclick="validate()"
               type="submit"
               class="btn btn-primary"
-              style="height: 60px; width: 300px"
+              style="
+                height: 60px;
+                width: 300px;
+                background-color: #3011bc;
+                border-color: #3011bc;
+              "
             >
               Confirmar
             </button>
@@ -659,104 +743,123 @@
           <a href="" class="me-4 text-reset">
             <i class="fab fa-facebook-f"></i>
           </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-                </section>
-                <!-- Section: Social media -->
-                <!-- Section: Links  -->
-                <section class="">
-                    <div class="container text-center text-md-start mt-5">
-                        <!-- Grid row -->
-                        <div class="row mt-3">
-                            <!-- Grid column -->
-                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <!-- Content -->
-                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
-                                    <i class="fas fa-gem me-3"></i>Arrive
-                                </h6>
-                                <p>
-                                    Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </div>
-                            <!-- Grid column -->
-                            <!-- Grid column -->
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <!-- Links -->
-                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
-                                    Products
-                                </h6>
-                                <p>
-                                    <a href="#!" class="text-reset">Angular</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">React</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">Vue</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">Laravel</a>
-                                </p>
-                            </div>
-                            <!-- Grid column -->
-                            <!-- Grid column -->
-                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <!-- Links -->
-                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
-                                    Useful links
-                                </h6>
-                                <p>
-                                    <a href="#!" class="text-reset">Pricing</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">Settings</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">Orders</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">Help</a>
-                                </p>
-                            </div>
-                            <!-- Grid column -->
-                            <!-- Grid column -->
-                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                <!-- Links -->
-                                <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(206, 206, 206)">
-                                    Contact
-                                </h6>
-                                <p>
-                                    <i class="fas fa-home me-3"></i> Universidade de Aveiro, 3810-193 Aveiro
-                                </p>
-                                <p><i class="fas fa-envelope me-3"></i> arrive@ua.pt</p>
-                                <p><i class="fas fa-phone me-3"></i> + 969 999 999</p>
-                                <p><i class="fas fa-print me-3"></i> + 231 457 876</p>
-                            </div>
-                            <!-- Grid column -->
-                        </div>
-                        <!-- Grid row -->
-                    </div>
-                </section>
-                <!-- Section: Links  -->
-                <!-- Copyright -->
-                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
-                    © 2021 Copyright:
-                    <a class="text-reset fw-bold" href="https://www.ua.pt/">Alunos de MAS da Universidade de Aveiro</a
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6
+                class="text-uppercase fw-bold mb-4"
+                style="color: rgb(206, 206, 206)"
+              >
+                <i class="fas fa-gem me-3"></i>Arrive
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6
+                class="text-uppercase fw-bold mb-4"
+                style="color: rgb(206, 206, 206)"
+              >
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Angular</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">React</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vue</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Laravel</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6
+                class="text-uppercase fw-bold mb-4"
+                style="color: rgb(206, 206, 206)"
+              >
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6
+                class="text-uppercase fw-bold mb-4"
+                style="color: rgb(206, 206, 206)"
+              >
+                Contact
+              </h6>
+              <p>
+                <i class="fas fa-home me-3"></i> Universidade de Aveiro,
+                3810-193 Aveiro
+              </p>
+              <p><i class="fas fa-envelope me-3"></i> arrive@ua.pt</p>
+              <p><i class="fas fa-phone me-3"></i> + 969 999 999</p>
+              <p><i class="fas fa-print me-3"></i> + 231 457 876</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://www.ua.pt/"
+          >Alunos de MAS da Universidade de Aveiro</a
         >
       </div>
       <!-- Copyright -->

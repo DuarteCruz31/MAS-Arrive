@@ -83,7 +83,18 @@ jQuery(document).ready(function($) {
     })
 
     $('input[type=radio].metodo-pagamento').remove();
+
+    ko.applyBindings(new HTMLwriter())
+
 });
+
+function HTMLwriter() {
+    self.nome = ko.observable()
+    self.mail = ko.observable()
+    self.nome = localStorage.getItem('nome')
+    self.mail = localStorage.getItem('email')
+
+}
 
 function validate() {
     controlo = true

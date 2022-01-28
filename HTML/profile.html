@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-	<link
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -56,14 +59,19 @@
             <a class="nav-link" href="destinations.html"
               ><i class="fa fa-plane"></i> DESTINATIONS</a
             >
-            <a class="nav-link active" href="login.html"
-              ><i class="fa fa-sign-in-alt"></i> LOGIN</a
+            <a class="nav-link" href="aboutus.html"
+              ><i class="fa fa-user"></i> ABOUT US</a
             >
           </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <a class="nav-link" href="profile.html">Welcome Back, José</a>
-        </ul>
+        <nav class="main-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <a class="nav-link" href="profile.html"
+              ><i class="fa fa-user"></i> Welcome Back,&nbsp;
+              <span data-bind="text:nome"></span>
+            </a>
+          </ul>
+        </nav>
       </div>
     </nav>
     <div style="margin-top: 150px">
@@ -78,8 +86,9 @@
                 width="150px "
                 src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg
         "
-              /><span class="font-weight-bold">José Silva</span>
-              <span class="text-black-50">josesilva3@ua.pt</span><span> </span>
+              /><span class="font-weight-bold" data-bind="text:nome"></span>
+              <span class="text-black-50" data-bind="text:mail"></span
+              ><span> </span>
             </div>
           </div>
           <div class="col-md-5 border-right">
@@ -390,7 +399,7 @@
     ></script>
     <script src="../Scripts/jquery-3.6.0.min.js "></script>
     <script src="../Scripts/knockout-3.5.1.js "></script>
-    <script src="../Scripts/login.js "></script>
-	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="../Scripts/home.js "></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
   </body>
 </html>
