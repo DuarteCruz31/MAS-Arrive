@@ -758,3 +758,18 @@ header[role="banner"]::after {
   padding-bottom: 30px;
   padding-top: 30px;
 }
+
+
+.addtrip{
+	background-color:rgb(255, 155, 85);
+	color:rgb(62, 62, 96);
+	border-color:rgb(255, 155, 85);
+	
+}
+.addtrip:hover{
+	background-color:rgb(62, 62, 96);
+	color:rgb(255, 155, 85);
+	border-color:rgb(62, 62, 96);
+	transition: all 0.3s;
+	
+}
