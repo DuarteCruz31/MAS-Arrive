@@ -55,10 +55,20 @@ function check() {
 
 function forgot() {
     $('#forgotpass').modal('show')
+    $('#modal2').addClass('d-none')
 }
+
 
 function register() {
     $('#registo').modal('show')
 }
 
 console.log(localStorage)
+
+
+// modal
+
+outroModal = function () {
+    $('#modal1').addClass('d-none')
+    $('#modal2').removeClass('d-none')
+}
