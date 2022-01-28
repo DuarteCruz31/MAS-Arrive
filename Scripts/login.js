@@ -46,7 +46,7 @@ function check() {
     var userRemember = document.getElementById("rememberMe");
 
     if (userName.value == storedName && userPw.value == storedPw) {
-        window.location.href = "./home.html";
+        window.location.href = "./HTML/home.html";
     } else {
         alert('Wrong Username and Password combination');
     }
