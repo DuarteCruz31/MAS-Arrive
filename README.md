@@ -1,1 +1,1 @@
-Projeto desenvolvido por alunos da Universidade de Aveiro em engenharia informática no intuito das aulas de Modelação e Análise de Sistemas
+Projeto desenvolvido intuito das aulas de Modelação e Análise de Sistemas de forma a criar uma plataforma onde várias agências podessem adicionar os seus planos e expô-los a clientes.
